@@ -1,22 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-
-namespace CalculatingAverages
+﻿namespace CalculatingAverages
 {
     class Calculations
     {
-        public int Sum(List<int> numbers)
-        {
-            int total = 0;
-
-            for (int i = 0; i < numbers.Count; i++)
-            {
-                total += numbers[i];
-            }
-
-            return total;
-        }
-
         public int Average(int sum, int amount)
         {
             return sum / amount;
