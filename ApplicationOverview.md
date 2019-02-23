@@ -4,7 +4,10 @@
 >Create a console application that will accept ten numbers between 0 and 100, and report their sum.  
 
 ```cs 
-int Sum(List<int> numbers)
+using Linq;
+
+var numbers = new List<int>();
+numbers.Sum();
 ```
 
 ### Average ten scores
