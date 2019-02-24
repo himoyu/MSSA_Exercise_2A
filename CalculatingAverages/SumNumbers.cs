@@ -21,7 +21,7 @@ namespace CalculatingAverages
 
              do
             {
-                var numbers = AskForInput(10);
+                var numbers = AskForGrades(10);
                 var answer = calculations.Sum(numbers);
 
                 display.SingleLine($"The sum of your input is {answer}.","Press ENTER to continue");

@@ -25,7 +25,7 @@ namespace CalculatingAverages
                 var answer = calculations.Average(sum, numbers.Count);
                 var grade = calculations.Grade(answer);
 
-                display.SingleLine($"The average grade of your scores is a(n) {grade}, ({answer}%).","Press ENTER to continue");
+                display.SingleLine($"The average grade of your scores is {grade}, ({answer}%).","Press ENTER to continue");
 
             } while (RunAgain());
         }

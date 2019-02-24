@@ -21,7 +21,7 @@ namespace CalculatingAverages
             return title;
         }
 
-        protected List<int> AskForInput(int iterations)
+        protected List<int> AskForGrades(int iterations)
         {
             var numbers = new List<int>();
 
