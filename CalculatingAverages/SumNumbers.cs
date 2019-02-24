@@ -17,31 +17,13 @@ namespace CalculatingAverages
         public override void Run()
         {
             display = new Display(title, totalRows, Program.colorPreset);
+            var calculations = new Calculations();
 
              do
             {
-                var numbers = new List<int>();
+                var numbers = AskForInput(10);
+                var answer = calculations.Sum(numbers);
 
-                for (int i = 0; i < 10; i++)
-                {
-                    while(true)
-                    {
-                        var input = display.Question("Please input a number to be added: ", 
-                                                    $"You have currently input {i} numbers");
-
-                        if(Int32.TryParse(input, out int result))
-                        {
-                            numbers.Add(result);
-                            break;
-                        }
-                        else
-                        {
-                            display.SingleLine("That is not a number value.","Press ENTER to try again");
-                        }
-                    }
-                } 
-
-                var answer = numbers.Sum();
                 display.SingleLine($"The sum of your input is {answer}.","Press ENTER to continue");
 
             } while (RunAgain());

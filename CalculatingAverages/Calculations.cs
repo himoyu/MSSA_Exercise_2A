@@ -1,7 +1,15 @@
-﻿namespace CalculatingAverages
+﻿using System.Collections.Generic;
+using System.Linq;
+
+namespace CalculatingAverages
 {
     class Calculations
     {
+        public int Sum(List<int> numbers)
+        {
+            return numbers.Sum();
+        }
+
         public int Average(int sum, int amount)
         {
             return sum / amount;

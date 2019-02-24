@@ -22,6 +22,31 @@ namespace CalculatingAverages
             return title;
         }
 
+        protected List<int> AskForInput(int iterations)
+        {
+            var numbers = new List<int>();
+
+                for (int i = 0; i < iterations; i++)
+                {
+                    while(true)
+                    {
+                        var input = display.Question("Please input a number to be added: ", 
+                                                    $"You have currently input {i} numbers");
+
+                        if(Int32.TryParse(input, out int result))
+                        {
+                            numbers.Add(result);
+                            break;
+                        }
+                        else
+                        {
+                            display.SingleLine("That is not a number value.","Press ENTER to try again");
+                        }
+                    }
+                }
+            return numbers;
+        }
+
         protected bool RunAgain()
         {
             var runAgainList = new List<IMenuItem>
