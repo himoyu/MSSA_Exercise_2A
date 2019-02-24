@@ -29,7 +29,7 @@ namespace CalculatingAverages
 
         private static void InitializeClasses()
         {
-            colorPreset = ColorPreset.Sprite;
+            colorPreset = ColorPreset.Monochrome;
             menuItems = new List<IMenuItem>();
 
             var sumNumbers = new SumNumbers();

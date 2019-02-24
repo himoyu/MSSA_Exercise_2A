@@ -37,29 +37,31 @@ namespace CalculatingAverages
 
             do
             {
-                string message = "";
-                var input = display.Question("Please input a number to be added: ", 
-                                            $"You have currently input {iterations} numbers");
-
-                if(Int32.TryParse(input, out int result))
+                while(true)
                 {
-                    if(result >= 0 && result <= 100)
+                    string message = "";
+                    var input = display.Question("Please input a number to be added: ",
+                                                $"You have currently input {iterations} numbers");
+
+                    if (Int32.TryParse(input, out int result))
                     {
-                        numbers.Add(result);
-                        iterations++;
-                        break;
-                    } 
-                    
-                    message = "Please enter a value from 0 to 100.";
-                    
-                }
-                else
-                {
-                    message = "That is not a number value.";
-                }
+                        if (result >= 0 && result <= 100)
+                        {
+                            numbers.Add(result);
+                            iterations++;
+                            break;
+                        }
+                            message = "Please enter a value from 0 to 100.";
 
-                display.SingleLine(message,"Press ENTER to try again");
+                    }
+                    else
+                    {
+                        message = "That is not a number value.";
+                    }
 
+                    display.SingleLine(message, "Press ENTER to try again");
+                }
+                
             } while(RunAgain("Would you like to enter another grade?"));
 
             return numbers;

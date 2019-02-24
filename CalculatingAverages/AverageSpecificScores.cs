@@ -35,7 +35,7 @@ namespace CalculatingAverages
         {
             while(true)
             {
-                var interationInput = display.Question("How many grades would like to input?", "Enter a number value and press ENTER");
+                var interationInput = display.Question("How many grades would like to input: ", "Enter a number value and press ENTER");
                 string message;
 
                 if(Int32.TryParse(interationInput, out int result))

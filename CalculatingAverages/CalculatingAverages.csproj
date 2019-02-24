@@ -48,6 +48,7 @@
     <Compile Include="Applet.cs" />
     <Compile Include="AverageSpecificScores.cs" />
     <Compile Include="AverageTenScores.cs" />
+    <Compile Include="AverageUnspecifiedScores.cs" />
     <Compile Include="Calculations.cs" />
     <Compile Include="Exit.cs" />
     <Compile Include="Program.cs" />
