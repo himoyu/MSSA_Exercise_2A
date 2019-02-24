@@ -38,6 +38,12 @@ namespace CalculatingAverages
             var averageTenScores = new AverageTenScores();
             menuItems.Add(averageTenScores);
 
+            var averageSpecificScores = new AverageSpecificScores();
+            menuItems.Add(averageSpecificScores);
+
+            var averageUnspecifiedScores = new AverageUnspecifiedScores();
+            menuItems.Add(averageUnspecifiedScores);
+
             var exit = new Exit();
             menuItems.Add(exit);
 

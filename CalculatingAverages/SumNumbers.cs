@@ -26,7 +26,7 @@ namespace CalculatingAverages
 
                 display.SingleLine($"The sum of your input is {answer}.","Press ENTER to continue");
 
-            } while (RunAgain());
+            } while (RunAgain("Would you like to try again?"));
 
         }
     }

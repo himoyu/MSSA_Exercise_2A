@@ -20,14 +20,14 @@ namespace CalculatingAverages
 
              do
             {
-                var numbers = AskForInput(10);
+                var numbers = AskForGrades(10);
                 var sum = calculations.Sum(numbers);
                 var answer = calculations.Average(sum, numbers.Count);
                 var grade = calculations.Grade(answer);
 
                 display.SingleLine($"The average grade of your scores is {grade}, ({answer}%).","Press ENTER to continue");
 
-            } while (RunAgain());
+            } while (RunAgain("Would you like to try again?"));
         }
     }
 }

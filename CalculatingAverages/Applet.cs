@@ -56,7 +56,7 @@ namespace CalculatingAverages
             return numbers;
         }
 
-        protected bool RunAgain()
+        protected bool RunAgain(string message)
         {
             var runAgainList = new List<IMenuItem>
             {
@@ -64,7 +64,7 @@ namespace CalculatingAverages
                 new Option("No")
             };
 
-            var runAgainMenu = new Menu(runAgainList, "Would you like to try again?", Program.colorPreset);
+            var runAgainMenu = new Menu(runAgainList, message, Program.colorPreset);
             do
             {
                 runAgainMenu.Display();

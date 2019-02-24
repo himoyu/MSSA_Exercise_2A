@@ -4,7 +4,7 @@ using Utilities.ConsoleUI;
 
 namespace CalculatingAverages
 {
-    class AverageSpecificScores : Applet
+    class AverageUnspecifiedScores : Applet
     {
         private new string title = "Average a Specified Number of Grade Scores";
 
@@ -20,8 +20,7 @@ namespace CalculatingAverages
 
              do
             {
-                var iterations = AskForNumberOfGrades();
-                var numbers = AskForGrades(iterations);
+                var numbers = AskForGrades();
                 var sum = calculations.Sum(numbers);
                 var answer = calculations.Average(sum, numbers.Count);
                 var grade = calculations.Grade(answer);
@@ -31,27 +30,39 @@ namespace CalculatingAverages
             } while (RunAgain("Would you like to try again?"));
         }
 
-        private int AskForNumberOfGrades()
+        private List<int> AskForGrades()
         {
-            while(true)
-            {
-                var interationInput = display.Question("How many grades would like to input?", "Enter a number value and press ENTER");
-                string message;
+            int iterations = 0;
+            var numbers = new List<int>();
 
-                if(Int32.TryParse(interationInput, out int result))
+            do
+            {
+                string message = "";
+                var input = display.Question("Please input a number to be added: ", 
+                                            $"You have currently input {iterations} numbers");
+
+                if(Int32.TryParse(input, out int result))
                 {
-                    if(result > 0)
+                    if(result >= 0 && result <= 100)
                     {
-                        return result;
-                    }
-                    message = "Please input a number greater than 0.";
+                        numbers.Add(result);
+                        iterations++;
+                        break;
+                    } 
+                    
+                    message = "Please enter a value from 0 to 100.";
+                    
                 }
                 else
                 {
-                    message = "That is not a number.";
+                    message = "That is not a number value.";
                 }
+
                 display.SingleLine(message,"Press ENTER to try again");
-            }
+
+            } while(RunAgain("Would you like to enter another grade?"));
+
+            return numbers;
         }
     }
 }

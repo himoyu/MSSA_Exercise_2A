@@ -46,6 +46,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Applet.cs" />
+    <Compile Include="AverageSpecificScores.cs" />
     <Compile Include="AverageTenScores.cs" />
     <Compile Include="Calculations.cs" />
     <Compile Include="Exit.cs" />
