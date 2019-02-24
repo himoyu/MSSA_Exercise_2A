@@ -35,6 +35,9 @@ namespace CalculatingAverages
             var sumNumbers = new SumNumbers();
             menuItems.Add(sumNumbers);
 
+            var averageTenScores = new AverageTenScores();
+            menuItems.Add(averageTenScores);
+
             var exit = new Exit();
             menuItems.Add(exit);
 

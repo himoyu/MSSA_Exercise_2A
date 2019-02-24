@@ -7,7 +7,6 @@ namespace CalculatingAverages
     public class Applet : IMenuItem
     {
         protected Display display;
-        protected Validator validator;
 
         protected string title;
         protected int totalRows = 4;
@@ -30,18 +29,28 @@ namespace CalculatingAverages
                 {
                     while(true)
                     {
+                        string message;
                         var input = display.Question("Please input a number to be added: ", 
                                                     $"You have currently input {i} numbers");
 
                         if(Int32.TryParse(input, out int result))
                         {
-                            numbers.Add(result);
-                            break;
+                            if(result >= 0 && result <= 100)
+                            {
+                                numbers.Add(result);
+                                break;
+                            }
+                            
+                            message = "Please enter a value from 0 to 100.";
+                            
                         }
                         else
                         {
-                            display.SingleLine("That is not a number value.","Press ENTER to try again");
+                            message = "That is not a number value.";
                         }
+
+                        display.SingleLine(message,"Press ENTER to try again");
+
                     }
                 }
             return numbers;
