@@ -20,9 +20,9 @@ namespace CalculatingAverages
 
              do
             {
-                var numbers = new List<int>(10);
+                var numbers = new List<int>();
 
-                for (int i = 0; i < numbers.Count; i++)
+                for (int i = 0; i < 10; i++)
                 {
                     while(true)
                     {
