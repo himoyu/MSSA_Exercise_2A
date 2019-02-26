@@ -34,6 +34,7 @@
   <ItemGroup>
     <Reference Include="ConsoleUI">
       <HintPath>..\..\Utilities\ConsoleUI\bin\Release\netstandard2.0\ConsoleUI.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />

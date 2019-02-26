@@ -6,7 +6,7 @@ namespace CalculatingAverages
 {
     class AverageUnspecifiedScores : Applet
     {
-        private new string title = "Average a Specified Number of Grade Scores";
+        private new string title = "Average an Unspecified Number of Grade Scores";
 
         public override string Title()
         {
@@ -25,7 +25,7 @@ namespace CalculatingAverages
                 var answer = calculations.Average(sum, numbers.Count);
                 var grade = calculations.Grade(answer);
 
-                display.SingleLine($"The average grade of your scores is {grade}, ({answer}%).","Press ENTER to continue");
+                display.Question($"The average grade of your scores is {grade}, ({answer}%).","Press ENTER to continue");
 
             } while (RunAgain("Would you like to try again?"));
         }
