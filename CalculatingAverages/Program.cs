@@ -1,4 +1,3 @@
-using System;
 using System.Collections.Generic;
 using Utilities.ConsoleUI;
 
@@ -29,7 +28,7 @@ namespace CalculatingAverages
 
         private static void InitializeClasses()
         {
-            colorPreset = ColorPreset.Monochrome;
+            colorPreset = ColorPreset.Patriotic;
             menuItems = new List<IMenuItem>();
 
             var sumNumbers = new SumNumbers();
