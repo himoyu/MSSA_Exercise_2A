@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatingAverages", "Calc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleUI", "..\Utilities\ConsoleUI\ConsoleUI.csproj", "{2464ED3A-403F-48DF-BD7E-CCE61B007BA9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TaskManagement", "..\..\..\OneDrive\Documents\MSSA\ISTA220\TaskManagement\TaskManagement\TaskManagement.csproj", "{6EE97599-2510-491A-BC9D-8C884544167B}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{2464ED3A-403F-48DF-BD7E-CCE61B007BA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2464ED3A-403F-48DF-BD7E-CCE61B007BA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2464ED3A-403F-48DF-BD7E-CCE61B007BA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EE97599-2510-491A-BC9D-8C884544167B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EE97599-2510-491A-BC9D-8C884544167B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EE97599-2510-491A-BC9D-8C884544167B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EE97599-2510-491A-BC9D-8C884544167B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

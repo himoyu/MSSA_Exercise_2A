@@ -28,7 +28,7 @@ namespace CalculatingAverages
 
         private static void InitializeClasses()
         {
-            colorPreset = ColorPreset.Patriotic;
+            colorPreset = ColorPreset.Sprite;
             menuItems = new List<IMenuItem>();
 
             var sumNumbers = new SumNumbers();
